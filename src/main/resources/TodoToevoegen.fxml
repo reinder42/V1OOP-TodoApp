@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="114.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.reinder42.TodoApp.controller.TodoToevoegenController">
    <children>
       <TextField fx:id="todoTextField" layoutX="13.0" layoutY="37.0" prefHeight="26.0" prefWidth="318.0" />

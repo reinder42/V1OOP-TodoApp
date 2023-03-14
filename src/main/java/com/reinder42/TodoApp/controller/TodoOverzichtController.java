@@ -103,6 +103,8 @@ public class TodoOverzichtController implements VerversbareInterface
 
         Stage newStage = new Stage();
         newStage.setScene(new Scene(root));
+        newStage.setResizable(false);
+        newStage.setTitle("Nieuwe todo toevoegen");
         newStage.initModality(Modality.APPLICATION_MODAL);
         newStage.showAndWait();
     }
