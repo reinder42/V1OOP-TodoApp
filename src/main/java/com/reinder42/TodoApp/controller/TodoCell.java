@@ -1,6 +1,7 @@
 package com.reinder42.TodoApp.controller;
 
 import com.reinder42.TodoApp.model.Todo;
+import com.reinder42.TodoApp.model.TodoService;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -16,6 +17,9 @@ public class TodoCell extends ListCell<Todo>
     // Todo object
     private Todo todo;
 
+    // Reference naar TodoService
+    private TodoService todoService;
+
     // Reference naar "parent" overzicht controller object
     private VerversbareInterface verversbareInterface;
 
@@ -26,9 +30,10 @@ public class TodoCell extends ListCell<Todo>
     // JavaFX loader
     private FXMLLoader loader;
 
-    public TodoCell(VerversbareInterface verversbareInterface) {
+    public TodoCell(VerversbareInterface verversbareInterface, TodoService todoService) {
         // Maak een associatie met de "parent" controller
         this.verversbareInterface = verversbareInterface;
+        this.todoService = todoService;
     }
 
     public void initialize()
@@ -39,7 +44,7 @@ public class TodoCell extends ListCell<Todo>
             public void handle(ActionEvent actionEvent) {
 
                 // gedaan en 'isSelected' hebben dezelfde waarde (boolean)
-                todo.setGedaan(checkBox.isSelected());
+                todoService.markeerTodoAlsGedaan(todo, checkBox.isSelected());
 
                 // Update todo counter via parent controller
                 verversbareInterface.ververs();

@@ -63,7 +63,7 @@ public class TodoOverzichtController implements VerversbareInterface
         todoListView.setItems(observableList);
 
         // Maak voor elke Todo een TodoCell object
-        todoListView.setCellFactory(listView -> new TodoCell(this));
+        todoListView.setCellFactory(listView -> new TodoCell(this, todoService));
     }
 
     public void updateTodoCount()
