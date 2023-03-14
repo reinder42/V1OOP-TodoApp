@@ -6,7 +6,19 @@ public class TodoService implements TodoServiceInterface {
     private ArrayList<Todo> todos;
 
     public TodoService() {
+        // Initialiseer lege array
         todos = new ArrayList<Todo>();
+
+        // Nieuwe afgevinkte todo
+        Todo todo = new Todo();
+        todo.setText("Pakketje halen bij boekhandel");
+        todo.setGedaan(true);
+
+        // Todo's "hard-coded" toevoegen aan app
+        voegTodoToe("Boodschappen doen");
+        voegTodoToe("Lekkende kraan repareren");
+        voegTodoToe(todo);
+        voegTodoToe("Hardlopen met Alex");
     }
 
     public void voegTodoToe(String text) {

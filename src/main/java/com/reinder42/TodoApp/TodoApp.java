@@ -18,17 +18,6 @@ public class TodoApp extends Application
     {
         // Nieuwe todo service maken
         todoService = new TodoService();
-
-        // Nieuwe afgevinkte todo
-        Todo todo = new Todo();
-        todo.setText("Pakketje halen bij boekhandel");
-        todo.setGedaan(true);
-
-        // Todo's "hard-coded" toevoegen aan app
-        todoService.voegTodoToe("Boodschappen doen");
-        todoService.voegTodoToe("Lekkende kraan repareren");
-        todoService.voegTodoToe(todo);
-        todoService.voegTodoToe("Hardlopen met Alex");
     }
 
     public static void main(String[] args) {
