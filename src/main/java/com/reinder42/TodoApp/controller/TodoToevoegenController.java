@@ -1,7 +1,7 @@
 package com.reinder42.TodoApp.controller;
 
 import com.reinder42.TodoApp.model.Todo;
-import com.reinder42.TodoApp.model.TodoService;
+import com.reinder42.TodoApp.model.TodoServiceInterface;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -16,13 +16,13 @@ public class TodoToevoegenController
     private VerversbareInterface verversbareInterface;
 
     // Reference naar todo service object
-    private TodoService todoService;
+    private TodoServiceInterface todoService;
 
     public void setTodoOverzichtController(VerversbareInterface verversbareInterface) {
         this.verversbareInterface = verversbareInterface;
     }
 
-    public void setTodoService(TodoService service) {
+    public void setTodoService(TodoServiceInterface service) {
         todoService = service;
     }
 

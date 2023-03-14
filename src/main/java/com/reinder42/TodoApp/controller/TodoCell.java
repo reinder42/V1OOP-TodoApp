@@ -1,7 +1,7 @@
 package com.reinder42.TodoApp.controller;
 
 import com.reinder42.TodoApp.model.Todo;
-import com.reinder42.TodoApp.model.TodoService;
+import com.reinder42.TodoApp.model.TodoServiceInterface;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -18,7 +18,7 @@ public class TodoCell extends ListCell<Todo>
     private Todo todo;
 
     // Reference naar TodoService
-    private TodoService todoService;
+    private TodoServiceInterface todoService;
 
     // Reference naar "parent" overzicht controller object
     private VerversbareInterface verversbareInterface;
@@ -30,7 +30,7 @@ public class TodoCell extends ListCell<Todo>
     // JavaFX loader
     private FXMLLoader loader;
 
-    public TodoCell(VerversbareInterface verversbareInterface, TodoService todoService) {
+    public TodoCell(VerversbareInterface verversbareInterface, TodoServiceInterface todoService) {
         // Maak een associatie met de "parent" controller
         this.verversbareInterface = verversbareInterface;
         this.todoService = todoService;

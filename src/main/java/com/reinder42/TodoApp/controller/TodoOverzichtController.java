@@ -1,7 +1,7 @@
 package com.reinder42.TodoApp.controller;
 
 import com.reinder42.TodoApp.model.Todo;
-import com.reinder42.TodoApp.model.TodoService;
+import com.reinder42.TodoApp.model.TodoServiceInterface;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -25,7 +25,7 @@ public class TodoOverzichtController implements VerversbareInterface
     public Label todoCountLabel;
 
     // TodoService met todos array
-    private TodoService todoService;
+    private TodoServiceInterface todoService;
 
     public TodoOverzichtController() {
         // Lege constructor
@@ -36,7 +36,7 @@ public class TodoOverzichtController implements VerversbareInterface
         // Dus daarom doen we de "setup" in setTodoService()
     }
 
-    public void setTodoService(TodoService service) throws Exception {
+    public void setTodoService(TodoServiceInterface service) throws Exception {
         if(service == null) {
             throw new Exception("todoService mag niet null zijn!");
         }

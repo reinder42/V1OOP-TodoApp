@@ -3,6 +3,7 @@ package com.reinder42.TodoApp;
 import com.reinder42.TodoApp.controller.TodoOverzichtController;
 import com.reinder42.TodoApp.model.Todo;
 import com.reinder42.TodoApp.model.TodoService;
+import com.reinder42.TodoApp.model.TodoServiceInterface;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +12,7 @@ import javafx.stage.Stage;
 
 public class TodoApp extends Application
 {
-    private TodoService todoService = null;
+    private TodoServiceInterface todoService = null;
 
     public TodoApp()
     {
