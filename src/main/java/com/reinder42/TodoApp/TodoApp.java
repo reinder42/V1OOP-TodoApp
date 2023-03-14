@@ -4,6 +4,7 @@ import com.reinder42.TodoApp.controller.TodoOverzichtController;
 import com.reinder42.TodoApp.model.Todo;
 import com.reinder42.TodoApp.model.TodoService;
 import com.reinder42.TodoApp.model.TodoServiceInterface;
+import com.reinder42.TodoApp.model.TodoServicePersisted;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,7 +18,7 @@ public class TodoApp extends Application
     public TodoApp()
     {
         // Nieuwe todo service maken
-        todoService = new TodoService();
+        todoService = new TodoServicePersisted(); // new TodoService();
     }
 
     public static void main(String[] args) {

@@ -1,6 +1,8 @@
 package com.reinder42.TodoApp.model;
 
-public class Todo {
+import java.io.Serializable;
+
+public class Todo implements Serializable {
     private String text;
     private boolean gedaan;
 
