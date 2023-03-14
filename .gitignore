@@ -1,0 +1,7 @@
+/out/
+/lib/
+/.idea/
+/.vscode/
+/*.iml
+/bin/
+/target/
